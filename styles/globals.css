@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+  --text-color: #444444;
+  --link-color: #2293c0;
+  --link-color-hover: #10749b;
+
+  --border-radius: 5px;
+
+  --sml-spacing: 1rem;
+  --mid-spacing: 3rem;
+  --lrg-spacing: 6rem;
+
+  --max-width: 800px;
+
+  --box-color: #f9f8ff;
+  
+  --background-color: #bdd4e7;
+  --background-gradient: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, input{
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited{
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active{
+  color: var(--link-color-hover);
+  text-decoration: underline;
+}
+
+form input, form textarea, form button{
+  height: 40px;
+  border-radius: var(--border-radius);
+  font-size: 5rem;
+}
+
+form input, form textarea{
+  border: 1px solid var(--text-color);
+  padding: var(--mid-spacing);
+}
+
+form textarea{
+  font-family: 'Montserrat', sans-serif;
+  min-height: 200px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+form button{
+  border: none;
+  background: var(--link-color);
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+form button:hover{
+  background: var(--link-color-hover);
+}
+
+form button:disabled{
+  content: 'Loading...';
+  background: #DDDDDD;
+  color: #444444;
+  cursor: unset;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 3pt;
+}
+
+body{
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: var(--text-color);
+  background: var(--background-color);
+  background-image: var(--background-gradient);
+}
+
+.container{
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--lrg-spacing);
+  padding: var(--lrg-spacing);
+}
+
+header{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: var(--lrg-spacing);
+}
+
+header > nav ul{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--mid-spacing);
+  list-style: none;
+}
+
+.box{
+  width: 100%;
+  max-width: 800px;
+  padding: var(--lrg-spacing);
+  border-radius: var(--border-radius);
+  background: var(--box-color);
+}
+
+.form-errors{
+  color: #aa3e3e;
+}
+
+.mid-margin-top{
+  margin-top: var(--mid-spacing);
+}
+
+/* home page */
+.home{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.home-buttons > ul{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--mid-spacing);
+  list-style: none;
+}
+
+.home-buttons > ul li{
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.home-create-event, .home-join-event{
+  min-height: 150px;
+  width: 100%;
+  padding: var(--lrg-spacing);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: var(--mid-spacing);
+  background-color: #d6e4ff;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: all .3s;
+}
+
+.home-create-event:hover, .home-join-event:hover{
+  background-color: var(--link-color);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* join event page */
+.join-event{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.join-event > form{
+  
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--mid-spacing);
+}
+
+.join-event > form input{
+  flex: 1;
+}
+
+.join-event > form button{
+  min-width: 80px;
+}
+
+/* new event */
+.new-event{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.new-event form{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.new-event-dates{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--sml-spacing);
+}
+
+.new-event-dates > ul{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--sml-spacing);
+}
+
+.new-event-dates > ul li{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--sml-spacing);
+}
+
+.new-event-dates > input{
+  font-family: arial;
+}
+
+.new-event-dates > button{
+  width: min-content;
+  white-space: nowrap;
+}
+
+/* edit-event */
+.edit-event-results > ul{
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.edit-event-result{
+  padding: var(--mid-spacing);
+  background: #EEEEEE;
+  border-radius: var(--border-radius);
+}
+
+.edit-event-result ul{
+  list-style: none;
+}
+
+/* event */
+.event{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.event-top{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.event-top > h2{
+  flex: 1;
+}
+
+.event-dates{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--mid-spacing);
+}
+
+.event-dates > ul{
+  margin-top: var(--mid-spacing);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: var(--mid-spacing);
+  list-style: none;
+}
+
+.event-dates > ul li{
+  display: flex;
+}
+
+.event-dates > ul li input[type="checkbox"]{
+  display: none;
+}
+
+.event-dates > ul li label{
+  width: 100%;
+  padding: var(--mid-spacing);
+  background: #EEEEEE;
+  border-radius: var(--border-radius);
+  transition: all .3s;
+}
+
+.event-dates > ul li input[type="checkbox"]:checked +  label{
+  background: var(--link-color-hover);
+  color: #FFFFFF;
+}
+
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  
+}
